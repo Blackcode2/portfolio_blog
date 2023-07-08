@@ -10,9 +10,6 @@ class Introduction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenheight = MediaQuery.of(context).size.height;
-
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 120, 0, 110),
       child: ResponsiveRowColumn(
@@ -43,7 +40,7 @@ class Introduction extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 20),
                       child: HeadlineLargeText(
-                        text: 'Hi there, I am Dogyung Kim',
+                        text: 'Hi there, I am Blackcode2',
                       ),
                     ),
                   ),
@@ -53,7 +50,7 @@ class Introduction extends StatelessWidget {
                   ResponsiveRowColumnItem(
                       child: BodySmallText(
                     text:
-                        '$screenWidth Flutter developer and student of Handong Global University. I am a junior developer.',
+                        'Flutter developer and student of Handong Global University. I am a junior developer.',
                     textAlign: TextAlign.left,
                   )),
                   const ResponsiveRowColumnItem(
@@ -128,7 +125,12 @@ class IntroWork extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProjectsPage()));
+                    },
                     child: const Row(
                       children: [
                         Text(
@@ -193,7 +195,10 @@ class IntroBlog extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BlogPage()));
+                    },
                     child: const Row(
                       children: [
                         Text(

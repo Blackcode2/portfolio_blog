@@ -115,7 +115,7 @@ class BlogCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString('assets/blogs/blogs_list.json'),
+      future: rootBundle.loadString('assets/assets/blogs/blogs_list.json'),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
@@ -145,65 +145,6 @@ class BlogCardGridView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return BlogCard(dataList: jsonList[index]);
               });
-        }
-        return const Center(
-          child: Text('Can not laod data'),
-        );
-      },
-    );
-  }
-}
-
-class ResponsiveBlogCardGridView extends StatelessWidget {
-  ResponsiveBlogCardGridView({required this.isHome, super.key});
-
-  late bool isHome;
-  int fileCount = 0;
-  List jsonList = [];
-  late Map<String, dynamic> jsonData;
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: rootBundle.loadString('blogs/blogs_list.json'),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else if (snapshot.hasData) {
-          jsonData = jsonDecode(snapshot.data!);
-          jsonData.forEach((key, value) {
-            jsonList.add([key, value]);
-            // jsonList[n][0] is project folder name
-            // jsonList[n][1] is markdown file name
-          });
-          fileCount = jsonData.length;
-          if (fileCount < 3) {
-            isHome = false;
-          }
-          return ResponsiveGridView.builder(
-              shrinkWrap: true,
-              gridDelegate: const ResponsiveGridDelegate(
-                  crossAxisSpacing: 14,
-                  mainAxisSpacing: 14,
-                  minCrossAxisExtent: 150),
-              itemCount: isHome ? 3 : fileCount,
-              itemBuilder: (context, index) {
-                return BlogCard(dataList: jsonList[index]);
-              });
-          // return GridView.builder(
-          //     shrinkWrap: true,
-          //     gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          //       maxCrossAxisExtent: 480,
-          //       mainAxisSpacing: 14,
-          //       crossAxisSpacing: 14,
-          //       childAspectRatio: 3 / 4.5,
-          //     ),
-          //     itemCount: isHome ? 3 : fileCount,
-          // itemBuilder: (context, index) {
-          //   return BlogCard(dataList: jsonList[index]);
-          //     });
         }
         return const Center(
           child: Text('Can not laod data'),
