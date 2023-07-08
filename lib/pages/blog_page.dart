@@ -115,7 +115,7 @@ class BlogCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString('blogs/blogs_list.json'),
+      future: rootBundle.loadString('assets/blogs/blogs_list.json'),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(

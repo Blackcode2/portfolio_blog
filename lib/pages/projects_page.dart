@@ -115,7 +115,7 @@ class ProjectCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString('projects/projects_list.json'),
+      future: rootBundle.loadString('assets/projects/projects_list.json'),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
