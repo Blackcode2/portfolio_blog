@@ -5,7 +5,6 @@ import 'dart:convert';
 
 import 'package:portfolio_blog/pages/project_post_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:responsive_framework/responsive_value.dart';
 
 class ProjectCard extends StatelessWidget {
   ProjectCard({required this.dataList, super.key});
@@ -17,7 +16,8 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString("projects/${dataList[0]}/metadata.json"),
+      future:
+          rootBundle.loadString("assets/projects/${dataList[0]}/metadata.json"),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Card(
@@ -39,7 +39,7 @@ class ProjectCard extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => ProjectPostPage(
                               fileRoot:
-                                  "projects/${dataList[0]}/${dataList[1]}",
+                                  "assets/projects/${dataList[0]}/${dataList[1]}",
                             )));
               },
               child: Card(
@@ -59,7 +59,7 @@ class ProjectCard extends StatelessWidget {
                       ],
                     ),
                     image: DecorationImage(
-                        image: AssetImage("images/3d_character.png"),
+                        image: AssetImage("assets/images/3d_character.png"),
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter),
                   ),
@@ -115,7 +115,8 @@ class BlogCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString("blogs/${dataList[0]}/metadata.json"),
+      future:
+          rootBundle.loadString("assets/blogs/${dataList[0]}/metadata.json"),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Card(
@@ -136,7 +137,8 @@ class BlogCard extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) => BlogPostPage(
-                              fileRoot: "blogs/${dataList[0]}/${dataList[1]}",
+                              fileRoot:
+                                  "assets/blogs/${dataList[0]}/${dataList[1]}",
                             )));
               },
               child: Card(
@@ -152,7 +154,7 @@ class BlogCard extends StatelessWidget {
                       child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.4,
                         child: Image.asset(
-                          "images/post-2.jpg",
+                          "assets/images/post-2.jpg",
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -264,7 +266,7 @@ class BlogCard extends StatelessWidget {
                                 leading: const CircleAvatar(
                                     radius: 26,
                                     backgroundImage: AssetImage(
-                                      'images/3d_character.png',
+                                      'assets/images/3d_character.png',
                                     )),
                                 title: const Text(
                                   "Blackcode2",
