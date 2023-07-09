@@ -78,8 +78,8 @@ class AboutPage extends StatelessWidget {
                           ),
                         ),
                         FutureBuilder(
-                            future: rootBundle
-                                .loadString("assets/assets/about/about.md"),
+                            future:
+                                rootBundle.loadString("assets/about/about.md"),
                             builder: (context, snapshot) {
                               if (snapshot.connectionState ==
                                   ConnectionState.waiting) {
