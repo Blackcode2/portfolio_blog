@@ -127,13 +127,14 @@ class ProjectCardGridView extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         } else if (snapshot.hasData) {
-          print("has data");
           jsonData = jsonDecode(snapshot.data!);
           jsonData.forEach((key, value) {
             jsonList.add([key, value]);
             // jsonList[n][0] is project folder name
             // jsonList[n][1] is markdown file name
           });
+          print("has data");
+          print(jsonList[0]);
           fileCount = jsonData.length;
           if (fileCount < 6) {
             isHome = false;

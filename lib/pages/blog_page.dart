@@ -128,6 +128,8 @@ class BlogCardGridView extends StatelessWidget {
             // jsonList[n][0] is project folder name
             // jsonList[n][1] is markdown file name
           });
+          print("blog has data");
+          print(jsonList[0]);
           fileCount = jsonData.length;
           if (fileCount < 3) {
             isHome = false;
