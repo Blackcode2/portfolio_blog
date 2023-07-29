@@ -53,7 +53,7 @@ class BlogPostPage extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 50),
               child: SizedBox(
                 width: ResponsiveValue(context,
-                    defaultValue: 440.0,
+                    defaultValue: 600.0,
                     conditionalValues: [
                       const Condition.smallerThan(name: TABLET, value: 240.0)
                     ]).value,

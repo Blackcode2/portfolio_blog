@@ -1,7 +1,8 @@
 <!-- # <center>Portfolio Bolg</center> -->
 
 &nbsp;
-![](assets/assets/portfolio-blog/images/home-page.jpg)
+
+![assets/assets/portfolio-blog/images](https://github.com/Blackcode2/portfolio_blog/blob/main/assets/blogs/portfolio-blog/images/home-page.jpg)
 ![](resource:assets/portfolio-blog/images/home-page.jpg)
 ![](resource:assets/assets/portfolio-blog/images/home-page.jpg)
 
