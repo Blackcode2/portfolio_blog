@@ -79,13 +79,17 @@ class ProjectPostPage extends StatelessWidget {
                       defaultValue: 200.0,
                       conditionalValues: [
                         const Condition.smallerThan(
-                            name: 'DESKTOP3', value: 100.0)
+                            name: 'DESKTOP3', value: 100.0),
+                        const Condition.equals(name: TABLET, value: 20.0),
+                        const Condition.equals(name: MOBILE, value: 10.0),
                       ]).value!,
                   right: ResponsiveValue(context,
                       defaultValue: 200.0,
                       conditionalValues: [
                         const Condition.smallerThan(
-                            name: 'DESKTOP3', value: 100.0)
+                            name: 'DESKTOP3', value: 100.0),
+                        const Condition.equals(name: TABLET, value: 20.0),
+                        const Condition.equals(name: MOBILE, value: 10.0),
                       ]).value!),
               child: FutureBuilder(
                   future: loadAsset(fileRoot),

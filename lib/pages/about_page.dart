@@ -50,7 +50,9 @@ class AboutPage extends StatelessWidget {
                             defaultValue: 200.0,
                             conditionalValues: [
                               const Condition.smallerThan(
-                                  name: 'DESKTOP3', value: 100.0)
+                                  name: 'DESKTOP3', value: 100.0),
+                              const Condition.equals(name: TABLET, value: 20.0),
+                              const Condition.equals(name: MOBILE, value: 10.0),
                             ]).value!,
                         ResponsiveValue(context,
                             defaultValue: 80.0,
@@ -62,7 +64,9 @@ class AboutPage extends StatelessWidget {
                             defaultValue: 200.0,
                             conditionalValues: [
                               const Condition.smallerThan(
-                                  name: 'DESKTOP3', value: 100.0)
+                                  name: 'DESKTOP3', value: 100.0),
+                              const Condition.equals(name: TABLET, value: 20.0),
+                              const Condition.equals(name: MOBILE, value: 10.0),
                             ]).value!,
                         100),
                     child: Column(
