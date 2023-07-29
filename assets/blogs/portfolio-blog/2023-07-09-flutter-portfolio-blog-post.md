@@ -2,8 +2,7 @@
 
 &nbsp;
 
-<!-- ![](resource:assets/blogs/portfolio-blog/images/home-page.jpg) -->
-![](resource:assets/assets/blogs/portfolio-blog/images/home-page.jpg)
+![](assets/assets/blogs/portfolio-blog/images/home-page.jpg)
 
 ## Introduction
 Ever since embarking on my Flutter learning journey, I have delved into the creation of several captivating Flutter projects. However, as time has passed, I've noticed a challenge arising—I began to forget some of the essential concepts and cods I had utilized in those projects. Realizing the importance of preserving my knowledge, I came to a profound realization: the necessity of documentation.
@@ -24,7 +23,7 @@ Initially, I experimented with GitHub Pages and a Jekyll theme to create my port
 ## Where did I get reference for blog?
 The blog that became the reference of my blog referred to vonge theme in Jekyll theme. While initially drawing inspiration from a specific theme, I envision gradually infusing my portfolio blog with a touch of creative flair as I progress.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/vonge-theme.jpg)
+![](assets/assets/blogs/portfolio-blog/images/vonge-theme.jpg)
 https://jazzed-kale.cloudvent.net/
 
 &nbsp;
@@ -35,7 +34,7 @@ One of the most challenging aspects of my project was implementing responsive we
 
 Thankfully, I found a helpful package called **"responsive_framework"** that simplified the process. It provided tools and utilities specifically designed for creating responsive web designs in Flutter. With this package, I could automatically adapt my blog's layout and design based on the user's screen size and device orientation. It saved me time and ensured a seamless experience for users across different devices. Thanks to "responsive_framework," I successfully overcame the challenges of responsive web design and achieved a polished and user-friendly blog that works well on any device.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/responsive_framework.jpg)
+![](assets/assets/blogs/portfolio-blog/images/responsive_framework.jpg)
 https://pub.dev/packages/responsive_framework
 
 ### ResponsiveBreakpoints.builder
@@ -118,13 +117,13 @@ class HomePage extends StatelessWidget {
 }
 ```
 Desktop:
-![](resource:assets/assets/blogs/portfolio-blog/images/desktop.jpg)
+![](assets/assets/blogs/portfolio-blog/images/desktop.jpg)
 
 Desktop3:
-![](resource:assets/assets/blogs/portfolio-blog/images/desktop3.jpg)
+![](assets/assets/blogs/portfolio-blog/images/desktop3.jpg)
 
 Tablet:
-![](resource:assets/assets/blogs/portfolio-blog/images/tablet.jpg)
+![](assets/assets/blogs/portfolio-blog/images/tablet.jpg)
 
 ### ResponsiveRowColumn
 
@@ -188,9 +187,9 @@ This package actually contains several other useful widgets that are both conven
 
 I have created individual page files for each page, ensuring organized structure. All the components utilized on these pages are located within the 'components' folder. Moreover, essential project fonts and images are stored in the 'assets' folder. Additionally, the 'assets' folder also houses separate folders containing posts for projects and blogs, promoting efficient management and accessibility.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/libFolder.jpg)
+![](assets/assets/blogs/portfolio-blog/images/libFolder.jpg)
 
-![](resource:assets/assets/blogs/portfolio-blog/images/assets.jpg)
+![](assets/assets/blogs/portfolio-blog/images/assets.jpg)
 
 ### Home Page
 
@@ -202,7 +201,7 @@ The home page consists of five components: the top navigation bar, introduction 
 
 The main logo button and page buttons are created using the Text button component. Since these buttons are frequently used, I have implemented custom buttons to ensure consistency and ease of use.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/top-navigation-bar.jpg)
+![](assets/assets/blogs/portfolio-blog/images/top-navigation-bar.jpg)
 
 The page button is enclosed within a ResponsiveVisibility widget, allowing it to be hidden when the screen size becomes smaller, and instead displaying a Drawer widget. Additionally, this custom button accepts a function parameter for defining the page route, ensuring dynamic and seamless navigation within the application.
 
@@ -247,9 +246,9 @@ class NavigationbarButton extends StatelessWidget {
 
 The button, which redirects to another website, is implemented using the url_launcher package. It offers a straightforward integration process. To utilize it, I created a new Uri object by parsing a URI string, which was then passed as a parameter to the launchUrl function. Additionally, for asynchronous operation, the await keyword should be added before invoking the function.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/github-button.jpg)
+![](assets/assets/blogs/portfolio-blog/images/github-button.jpg)
 
-![](resource:assets/assets/blogs/portfolio-blog/images/launchUrl.jpg)
+![](assets/assets/blogs/portfolio-blog/images/launchUrl.jpg)
 
 ```dart
 final Uri _url = Uri.parse('https://github.com/Blackcode2');
@@ -277,7 +276,7 @@ ResponsiveRowColumnItem(
 
 The implementation of the Drawer widget posed a minor challenge during this project. I was initially unsure about creating a Drawer widget that could be utilized across all pages. However, after some exploration, I discovered that I could develop a custom drawer widget using GlobalKey or Builder. For this project, I opted to use GlobalKey. From my understanding, a key assigns uniqueness to widgets of the same type, allowing them to be differentiated. I plan to delve deeper into this concept and share my findings in a future post.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/drawer.jpg)
+![](assets/assets/blogs/portfolio-blog/images/drawer.jpg)
 
 Once I created the custom Drawer widget, I established variable for GlobalKey<ScaffoldState>. Subsequently, I assigned this key to the key parameter of the Scaffold. This approach enables me to globally control the state of the Scaffold widget through the key. Furthermore, I passed this key as a parameter to the TopNavigationBar widget. As a result, I can now open the Drawer by simply clicking the button within the TopNavigationBar widget.
 
@@ -309,8 +308,8 @@ EndDrawerButton(
 
 #### Project and blog section
 
-![](resource:assets/assets/blogs/portfolio-blog/images/project-section.jpg)
-![](resource:assets/assets/blogs/portfolio-blog/images/blog-section.jpg)
+![](assets/assets/blogs/portfolio-blog/images/project-section.jpg)
+![](assets/assets/blogs/portfolio-blog/images/blog-section.jpg)
 
 These sections serve as previews for the projects page and blog page, respectively. Each section includes buttons that redirect users to their respective pages. The content is displayed within cards, showcasing the title and other relevant details. When clicked, the cards open the corresponding post content. To handle this functionality, custom widgets called BlogCardGridView and ProjectCardGridView have been developed. These widgets accept a boolean type parameter to differentiate their usage on the home page or other pages.The purpose behind this distinction is that while the projects and blog pages can display an unlimited number of thumbnail cards, the home page has a constraint that limits the number of cards to be shown.
 
@@ -389,7 +388,7 @@ class IntroWork extends StatelessWidget {
 
 ## Projects page
 
-![](resource:assets/assets/blogs/portfolio-blog/images/projects-page.jpg)
+![](assets/assets/blogs/portfolio-blog/images/projects-page.jpg)
 
 The Projects page showcases thumbnail cards for each content. To accomplish this, I employed the GridView.builder widget. The GridView widget offers a gridDelegate property, which can be configured with two different types of delegates.
 
@@ -400,7 +399,7 @@ This gridDelegate property enables me to define the layout of the grid. Specific
 This delegate creates grid layouts with a fixed number of tiles in the cross axis. It does not care how big or small screen size is. It shows a fixed number of items.
 
 Example:
-![](resource:assets/assets/blogs/portfolio-blog/images/grid-fixed.jpg)
+![](assets/assets/blogs/portfolio-blog/images/grid-fixed.jpg)
 ```dart
 GridView.builder(
   itemCount: 10,
@@ -432,7 +431,7 @@ This is the description from official document.
 https://api.flutter.dev/flutter/rendering/SliverGridDelegateWithMaxCrossAxisExtent-class.html
 
 Example:
-![](resource:assets/assets/blogs/portfolio-blog/images/grid-max.jpg)
+![](assets/assets/blogs/portfolio-blog/images/grid-max.jpg)
 ```dart
 GridView.builder(
   itemCount: 10,
@@ -464,8 +463,8 @@ During the planning phase of this web project, I decided to utilize markdown fil
 
 As a first step, I created separate folders for project and blog within the assets directory. Each of these folders further contained individual subfolders for respective posts. However, a challenge arose when it came to loading the file paths dynamically.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/assets.jpg)
-![](resource:assets/assets/blogs/portfolio-blog/images/assets-blog.jpg)
+![](assets/assets/blogs/portfolio-blog/images/assets.jpg)
+![](assets/assets/blogs/portfolio-blog/images/assets-blog.jpg)
 
 To tackle this issue, I discovered that implementing a solution required the utilization of the FutureBuilder widget and the AssetBundle object. By leveraging the FutureBuilder widget, I was able to asynchronously load and retrieve the file paths. Additionally, the AssetBundle object played a crucial role in accessing and managing the assets within the application.
 
@@ -488,9 +487,9 @@ Despite the setback with the getDirectoryPath() function, I persisted in finding
 
 To overcome the challenge, I devised a solution by creating a JSON file that contained information about the subfolders and corresponding markdown file names within the top folder. In this JSON file, each subfolder name served as the key, and the associated markdown file name acted as the value.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/projects-folder.jpg)
+![](assets/assets/blogs/portfolio-blog/images/projects-folder.jpg)
 
-![](resource:assets/assets/blogs/portfolio-blog/images/projects-list.jpg)
+![](assets/assets/blogs/portfolio-blog/images/projects-list.jpg)
 
 Upon loading this JSON file, I decoded the snapshot data and organized it into a two-dimensional list. This list structure allowed for easy handling and processing of the data. Subsequently, each element from the list was passed as a parameter to a custom card widget.
 
@@ -550,7 +549,7 @@ Within each post folder, several essential components are present, including a m
 
 The metadata file contains key items that contribute to the thumbnail card's presentation. This includes details such as the post's title, description, author, date, or any other relevant information to provide a concise overview of the post's content.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/metadata.jpg)
+![](assets/assets/blogs/portfolio-blog/images/metadata.jpg)
 
 Within the application, I have implemented custom thumbnail card widgets dedicated to both projects and blog posts. These widgets receive a data list, containing the necessary information about subfolders and corresponding markdown file names, from their parent widget.
 
@@ -657,14 +656,14 @@ class ProjectCard extends StatelessWidget {
 }
 ```
 
-![](resource:assets/assets/blogs/portfolio-blog/images/project-card.jpg)
-![](resource:assets/assets/blogs/portfolio-blog/images/bolg-card.jpg)
+![](assets/assets/blogs/portfolio-blog/images/project-card.jpg)
+![](assets/assets/blogs/portfolio-blog/images/bolg-card.jpg)
 
 Now, when a user clicks on a card, the post page opens, seamlessly connecting the users to the desired content. The thumbnail card efficiently passes the path for the markdown file, which is then loaded using a FutureBuilder. This effective approach allows for smooth data retrieval.
 
 Once the file data is available, the flutter_markdown package effortlessly presents the post's content in a readable and user-friendly format. 
 
-![](resource:assets/assets/blogs/portfolio-blog/images/post-page.jpg)
+![](assets/assets/blogs/portfolio-blog/images/post-page.jpg)
 ```dart
 FutureBuilder(
   future: loadAsset(fileRoot),
@@ -696,7 +695,7 @@ In addition to the benefits of free hosting and flexibility, Github Pages allows
 
 As far as I know, there are two ways to host on GitHub Pages, and I've chosen to upload the entire project to a repository and host it from there. The first step is to create a repository on GitHub specifically for this project. You have the flexibility to choose any name for the repository; it's entirely up to you. However, it's essential to ensure that the repository is set to "public" to enable hosting on GitHub Pages.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/create-repository.jpg)
+![](assets/assets/blogs/portfolio-blog/images/create-repository.jpg)
 
 ### Build Web
 
@@ -737,13 +736,13 @@ https://medium.com/flutter/flutter-web-support-hits-the-stable-milestone-d6b84e8
 
 After run the above command, you will see a build/web directory with built files, including an assets directory, which need to be served together.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/build-web.jpg)
+![](assets/assets/blogs/portfolio-blog/images/build-web.jpg)
 
 One crucial aspect to be mindful of is the nested assets folder structure. In this setup, an assets folder is created under another assets folder. Consequently, when loading files from the assets directory, it's important to include an additional "assets" segment in the file path to access the correct files.
 
 For instance, when referring to an asset file within the nested assets folder, the path should be specified as "assets/assets/your_file_name". This ensures that the correct assets are located and properly utilized within the application
 
-![](resource:assets/assets/blogs/portfolio-blog/images/build-web-assets.jpg)
+![](assets/assets/blogs/portfolio-blog/images/build-web-assets.jpg)
 
 ```dart
 // this is noraml
@@ -794,7 +793,7 @@ git push -u origin main
 
 Then, go to Settings -> Pages in the repository and activate GitHub Pages. Choose Deply from a branch for Source. Choose master, /(root) for Branch and then save this setting. 
 
-![](resource:assets/assets/blogs/portfolio-blog/images/settings-pages.jpg)
+![](assets/assets/blogs/portfolio-blog/images/settings-pages.jpg)
 
 ### Actions and Workflows
 
@@ -804,7 +803,7 @@ However, there's a solution: GitHub Actions. Think of it as an automatic macro t
 
 First, you need to create .github/wrkflows folder structure. Then, create workflow.yml file.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/workflow-folder.jpg)
+![](assets/assets/blogs/portfolio-blog/images/workflow-folder.jpg)
 
 The content of workflow.yml file is like following:
 
@@ -839,7 +838,7 @@ I push to gh_pages branch at this time, not main branch. Therefore, the settings
 
 Once you push this new file, you can monitor the ongoing processes in the Actions tab. There, you'll be able to track the progress of various tasks. Once the actions are completed, your web page will be automatically updated with the changes you made.
 
-![](resource:assets/assets/blogs/portfolio-blog/images/actions.jpg)
+![](assets/assets/blogs/portfolio-blog/images/actions.jpg)
 
 &nbsp;
 

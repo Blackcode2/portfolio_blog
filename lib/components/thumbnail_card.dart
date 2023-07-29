@@ -46,56 +46,76 @@ class ProjectCard extends StatelessWidget {
               child: Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14)),
-                elevation: 1.0,
+                elevation: 0.5,
                 clipBehavior: Clip
                     .antiAliasWithSaveLayer, // what is this method for? Look it up later
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                      colors: [
-                        Color.fromARGB(232, 20, 150, 167),
-                        Color.fromARGB(0, 255, 255, 255),
-                      ],
-                    ),
+                    // gradient: const LinearGradient(
+                    //   begin: Alignment.bottomCenter,
+                    //   end: Alignment.topCenter,
+                    //   colors: [
+                    //     Color.fromARGB(232, 20, 150, 167),
+                    //     Color.fromARGB(0, 255, 255, 255),
+                    //   ],
+                    // ),
                     image: DecorationImage(
                         image: AssetImage(
                             "assets/projects/${dataList[0]}/images/${jsonData["image"]}"),
-                        opacity: 0.4,
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 30),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          jsonData["title"],
-                          style: const TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                  child: Stack(children: [
+                    Positioned.fill(
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(8),
+                                topRight: Radius.circular(8)),
+                            color: Color.fromARGB(190, 20, 150, 167),
                           ),
+                          height: MediaQuery.of(context).size.height * 0.18,
                         ),
-                        Text(
-                          jsonData["tag"][0],
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: ResponsiveValue(context,
-                                defaultValue: 18.0,
-                                conditionalValues: [
-                                  const Condition.smallerThan(
-                                      name: 'DESKTOP2', value: 16.0),
-                                ]).value,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                    Positioned.fill(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 24),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                jsonData["title"],
+                                style: const TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text(
+                                jsonData["tag"][0],
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: ResponsiveValue(context,
+                                      defaultValue: 18.0,
+                                      conditionalValues: [
+                                        const Condition.smallerThan(
+                                            name: 'DESKTOP2', value: 16.0),
+                                      ]).value,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ]),
                 ),
               ),
             ),
@@ -148,7 +168,7 @@ class BlogCard extends StatelessWidget {
               child: Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14)),
-                elevation: 1,
+                elevation: 0.5,
                 child: Column(
                   children: [
                     ClipRRect(
