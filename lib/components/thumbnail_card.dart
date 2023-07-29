@@ -56,12 +56,13 @@ class ProjectCard extends StatelessWidget {
                       end: Alignment.topCenter,
                       colors: [
                         Color.fromARGB(232, 20, 150, 167),
-                        Color.fromARGB(0, 20, 150, 167),
+                        Color.fromARGB(0, 255, 255, 255),
                       ],
                     ),
                     image: DecorationImage(
                         image: AssetImage(
                             "assets/projects/${dataList[0]}/images/${jsonData["image"]}"),
+                        opacity: 0.4,
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter),
                   ),

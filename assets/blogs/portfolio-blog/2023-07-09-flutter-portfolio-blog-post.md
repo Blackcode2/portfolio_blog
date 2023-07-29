@@ -1,7 +1,8 @@
 <!-- # <center>Portfolio Bolg</center> -->
 
 &nbsp;
-
+![](assets/assets/portfolio-blog/images/home-page.jpg)
+![](resource:assets/portfolio-blog/images/home-page.jpg)
 ![](resource:assets/assets/portfolio-blog/images/home-page.jpg)
 
 ## Introduction
