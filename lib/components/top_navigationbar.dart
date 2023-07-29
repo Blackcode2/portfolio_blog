@@ -76,25 +76,6 @@ class TopNavigationbar extends StatelessWidget {
               child: SizedBox(),
             ),
           ),
-
-          // 기존 버튼 위젯으로 만든 버튼
-          // ResponsiveRowColumnItem(
-          //   child: ElevatedButton(
-          //     onPressed: () {},
-          //     style: ElevatedButton.styleFrom(
-          //       backgroundColor: const Color.fromARGB(54, 184, 204, 252),
-          //       elevation: 0,
-          //       padding: EdgeInsets.zero,
-          //       // fixedSize: const Size(50, 50),
-          //       shape: const CircleBorder(),
-          //     ),
-          //     child: const ImageIcon(
-          //       AssetImage('assets/images/github-mark.png'),
-          //       color: Colors.black,
-          //       size: 30,
-          //     ),
-          //   ),
-          // ),
           ResponsiveRowColumnItem(
             child: ResponsiveVisibility(
               hiddenConditions: const [Condition.smallerThan(name: 'DESKTOP2')],

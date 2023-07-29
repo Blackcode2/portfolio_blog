@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_blog/pages/blog_page.dart';
 import 'package:portfolio_blog/pages/projects_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import '../components/button_widet.dart';
+import 'button_widget.dart';
 import 'custom_text.dart';
 
 class Introduction extends StatelessWidget {
@@ -50,7 +50,7 @@ class Introduction extends StatelessWidget {
                   ResponsiveRowColumnItem(
                       child: BodySmallText(
                     text:
-                        'Flutter developer and student of Handong Global University. I am a junior developer.',
+                        'Hello there! I\'m Blackcode2, a Computer Science and Engineering major pursuing my Bachelor\'s degree',
                     textAlign: TextAlign.left,
                   )),
                   const ResponsiveRowColumnItem(
@@ -59,7 +59,7 @@ class Introduction extends StatelessWidget {
                     ),
                   ),
                   ResponsiveRowColumnItem(
-                    child: ButtonWidet(
+                    child: ButtonWidget(
                       buttonText: 'Get in touch',
                       onTap: () {},
                     ),
@@ -96,7 +96,7 @@ class Introduction extends StatelessWidget {
                         const Condition.smallerThan(name: TABLET, value: 300.0)
                       ]).value,
                   child: Image.asset(
-                    'assets/images/3d_character.png',
+                    'assets/images/profile-image.png',
                   ),
                 )),
           ),
@@ -227,7 +227,7 @@ class IntroBlog extends StatelessWidget {
                       ]).value,
                   child: BodySmallText(
                       text:
-                          'Vonge blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!',
+                          'This is where I document my creative and exploratory pursuits. Come and witness my passionate drive for personal growth. Join me on this exciting journey of self-discovery and endless possibilities.',
                       textAlign: TextAlign.left),
                 ),
               ],

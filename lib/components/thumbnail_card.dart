@@ -40,6 +40,7 @@ class ProjectCard extends StatelessWidget {
                         builder: (context) => ProjectPostPage(
                               fileRoot:
                                   "assets/projects/${dataList[0]}/${dataList[1]}",
+                              metaData: jsonData,
                             )));
               },
               child: Card(
@@ -49,8 +50,8 @@ class ProjectCard extends StatelessWidget {
                 clipBehavior: Clip
                     .antiAliasWithSaveLayer, // what is this method for? Look it up later
                 child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
                       colors: [
@@ -59,7 +60,8 @@ class ProjectCard extends StatelessWidget {
                       ],
                     ),
                     image: DecorationImage(
-                        image: AssetImage("assets/images/3d_character.png"),
+                        image: AssetImage(
+                            "assets/projects/${dataList[0]}/images/${jsonData["image"]}"),
                         fit: BoxFit.cover,
                         alignment: Alignment.topCenter),
                   ),
@@ -139,6 +141,7 @@ class BlogCard extends StatelessWidget {
                         builder: (context) => BlogPostPage(
                               fileRoot:
                                   "assets/blogs/${dataList[0]}/${dataList[1]}",
+                              metaData: jsonData,
                             )));
               },
               child: Card(
@@ -154,7 +157,7 @@ class BlogCard extends StatelessWidget {
                       child: SizedBox(
                         height: MediaQuery.of(context).size.height * 0.4,
                         child: Image.asset(
-                          "assets/images/post-2.jpg",
+                          "assets/blogs/${dataList[0]}/images/${jsonData["image"]}",
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -266,7 +269,7 @@ class BlogCard extends StatelessWidget {
                                 leading: const CircleAvatar(
                                     radius: 26,
                                     backgroundImage: AssetImage(
-                                      'assets/images/3d_character.png',
+                                      'assets/images/profile-image.png',
                                     )),
                                 title: const Text(
                                   "Blackcode2",

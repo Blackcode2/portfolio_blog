@@ -5,12 +5,14 @@ import 'package:portfolio_blog/components/custom_drawer.dart';
 import '../components/top_navigationbar.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:portfolio_blog/components/custom_text.dart';
 
 class BlogPostPage extends StatelessWidget {
-  BlogPostPage({required this.fileRoot, super.key});
+  BlogPostPage({required this.fileRoot, required this.metaData, super.key});
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   late String fileRoot;
+  late Map<String, dynamic> metaData;
 
   // Fucntion to load markdown file from assets
   Future<String> loadAsset(String path) async {
@@ -47,6 +49,29 @@ class BlogPostPage extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 50),
+              child: SizedBox(
+                width: ResponsiveValue(context,
+                    defaultValue: 440.0,
+                    conditionalValues: [
+                      const Condition.smallerThan(name: TABLET, value: 240.0)
+                    ]).value,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    HeadlineLargeText(text: metaData['title']),
+                    const SizedBox(
+                      height: 38,
+                    ),
+                    Text(
+                      metaData['date'],
+                      style: Theme.of(context).textTheme.labelMedium,
+                    )
+                  ],
+                ),
+              ),
+            ),
             // 메타 데이터를 받기 위한 첫 번째 퓨처 빌더
             Padding(
               padding: EdgeInsets.only(
@@ -71,9 +96,13 @@ class BlogPostPage extends StatelessWidget {
                       );
                     } else if (snapshot.hasData) {
                       return Markdown(
-                        shrinkWrap: true,
-                        data: snapshot.data!.toString(),
-                      );
+                          shrinkWrap: true,
+                          data: snapshot.data!.toString(),
+                          styleSheet: MarkdownStyleSheet.fromTheme(ThemeData(
+                              textTheme: const TextTheme(
+                                  bodyMedium: TextStyle(
+                            fontSize: 20.0,
+                          )))));
                     }
 
                     return const Center();

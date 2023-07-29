@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'color_schemes.g.dart';
 import 'pages/home_page.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Porfolio Blog',
+      debugShowCheckedModeBanner: false,
+      title: 'Blackcode2 Blog',
       theme: ThemeData(
         // colorScheme: lightColorScheme,
         scaffoldBackgroundColor: const Color.fromARGB(54, 184, 204, 252),
@@ -55,8 +56,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: child!,
         breakpoints: [
-          const Breakpoint(start: 0, end: 450, name: MOBILE), //450
-          const Breakpoint(start: 451, end: 925, name: TABLET), // 451
+          const Breakpoint(start: 0, end: 450, name: MOBILE),
+          const Breakpoint(start: 451, end: 925, name: TABLET),
           const Breakpoint(start: 926, end: 1050, name: 'DESKTOP3'),
           const Breakpoint(start: 1051, end: 1200, name: 'DESKTOP2'),
           const Breakpoint(start: 1201, end: 1920, name: DESKTOP),

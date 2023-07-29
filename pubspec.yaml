@@ -66,12 +66,11 @@ flutter:
     - assets/images/
     - assets/about/
     - assets/blogs/
-    - assets/blogs/blog1/
-    - assets/blogs/blog2/
-    - assets/blogs/blog3/
+    - assets/blogs/portfolio-blog/
+    - assets/blogs/portfolio-blog/images/
     - assets/projects/
-    - assets/projects/project1/
-    - assets/projects/project2/
+    - assets/projects/portfolio-project/
+    - assets/projects/portfolio-project/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

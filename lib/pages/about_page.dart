@@ -46,14 +46,24 @@ class AboutPage extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(
-                        0,
+                        ResponsiveValue(context,
+                            defaultValue: 200.0,
+                            conditionalValues: [
+                              const Condition.smallerThan(
+                                  name: 'DESKTOP3', value: 100.0)
+                            ]).value!,
                         ResponsiveValue(context,
                             defaultValue: 80.0,
                             conditionalValues: [
                               const Condition.smallerThan(
                                   name: 'DESKTOP3', value: 30.0)
                             ]).value!,
-                        0,
+                        ResponsiveValue(context,
+                            defaultValue: 200.0,
+                            conditionalValues: [
+                              const Condition.smallerThan(
+                                  name: 'DESKTOP3', value: 100.0)
+                            ]).value!,
                         100),
                     child: Column(
                       children: [
@@ -77,6 +87,11 @@ class AboutPage extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(
+                          height: 400,
+                          width: 300,
+                          child: Image.asset("assets/images/profile-image.png"),
+                        ),
                         FutureBuilder(
                             future:
                                 rootBundle.loadString("assets/about/about.md"),
@@ -88,9 +103,14 @@ class AboutPage extends StatelessWidget {
                                 );
                               } else if (snapshot.hasData) {
                                 return Markdown(
-                                  shrinkWrap: true,
-                                  data: snapshot.data!.toString(),
-                                );
+                                    shrinkWrap: true,
+                                    data: snapshot.data!.toString(),
+                                    styleSheet:
+                                        MarkdownStyleSheet.fromTheme(ThemeData(
+                                            textTheme: const TextTheme(
+                                                bodyMedium: TextStyle(
+                                      fontSize: 20.0,
+                                    )))));
                               }
                               return const Center(
                                 child: Text("can not load the page"),

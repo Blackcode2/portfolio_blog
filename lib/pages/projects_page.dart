@@ -7,7 +7,6 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import '../components/thumbnail_card.dart';
-import 'package:flutter/foundation.dart';
 
 class ProjectsPage extends StatelessWidget {
   ProjectsPage({super.key});
@@ -108,10 +107,6 @@ class ProjectsPage extends StatelessWidget {
 class ProjectCardGridView extends StatelessWidget {
   ProjectCardGridView({required this.isHome, super.key});
 
-  String path(str) {
-    return (kIsWeb) ? 'assets/$str' : str;
-  }
-
   late bool isHome;
   int fileCount = 0;
   List jsonList = [];
@@ -120,7 +115,7 @@ class ProjectCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: rootBundle.loadString(path('projects/projects_list.json')),
+      future: rootBundle.loadString('assets/projects/projects_list.json'),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(

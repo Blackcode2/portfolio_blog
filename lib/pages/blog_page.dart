@@ -16,7 +16,7 @@ class BlogPage extends StatelessWidget {
   String header = 'Blog';
 
   String description =
-      'Vonge blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!';
+      'This is where I document my creative and exploratory pursuits. Come and witness my passionate drive for personal growth. Join me on this exciting journey of self-discovery and endless possibilities.';
 
   // Future<String> loadAsset(String path) async {
   //   return await rootBundle.loadString(path);
