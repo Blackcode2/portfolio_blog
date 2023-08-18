@@ -4,16 +4,16 @@
 
 # Version 1.0.0
 
-## Goal
+#### Goal
 * Build Flutter web
 * Learn how to make responsive web
 * Host on GitHub Pages
 
 &nbsp;
 
-## Pages
+#### Pages
 
-### Home Page
+#### Home Page
 
 ![](assets/assets/projects/portfolio-project/images/home-page.jpg)
 ![](assets/assets/projects/portfolio-project/images/home-project.jpg)
@@ -22,20 +22,20 @@
 
 &nbsp;
 
-### Projects Page
+#### Projects Page
 
 ![](assets/assets/projects/portfolio-project/images/project1.jpg)
 ![](assets/assets/projects/portfolio-project/images/project2.jpg)
 
 &nbsp;
 
-### Project Post Page
+#### Project Post Page
 
 ![](assets/assets/projects/portfolio-project/images/project-post.jpg)
 
 &nbsp;
 
-### Blog Page
+#### Blog Page
 
 <!-- ![](assets/assets/projects/portfolio-project/images/blog1.jpg) -->
 ![](assets/assets/projects/portfolio-project/images/blog1.jpg)
@@ -44,14 +44,14 @@
 
 &nbsp;
 
-### Blog Post Page
+#### Blog Post Page
 
 <!-- ![](assets/assets/projects/portfolio-project/images/project-post.jpg) -->
 ![](assets/assets/projects/portfolio-project/images/project-post.jpg)
 
 &nbsp;
 
-### About Page
+#### About Page
 
 <!-- ![](assets/assets/projects/portfolio-project/images/About1.jpg) -->
 ![](assets/assets/projects/portfolio-project/images/About1.jpg)
@@ -60,9 +60,9 @@
 
 &nbsp;
 
-## Features
+#### Features
 
-### Responsive Web
+#### Responsive Web
 
 "responsive_framework" package provided tools and utilities specifically designed for creating responsive web designs in Flutter. With this package, I could automatically adapt my blog's layout and design based on the user's screen size and device orientation. 
 
@@ -83,7 +83,7 @@
 
 &nbsp;
 
-### Markdown
+#### Markdown
 
 In this blog, all posts are created as markdown files. To effectively incorporate markdown files into my Flutter project, flutter_markdown package is used.
 
@@ -97,7 +97,7 @@ In addition to using the flutter_markdown package for incorporating markdown fil
 
 &nbsp;
 
-## Hosting
+#### Hosting
 
 GitHub Pages not only offers the advantage of being free but also provides a high degree of freedom in managing and customizing website. I uploaded the whole project to repository then activated the GitHup Pages.
 
@@ -106,7 +106,7 @@ GitHub Pages not only offers the advantage of being free but also provides a hig
 
 &nbsp;
 
-### Actions and Workflows
+#### Actions and Workflows
 
 I have to repeat manual process each time I update or make adjustments to the project. This inefficiency becomes both frustrating and time-consuming.
 

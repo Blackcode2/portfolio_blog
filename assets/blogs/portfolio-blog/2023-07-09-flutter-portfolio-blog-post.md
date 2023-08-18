@@ -4,7 +4,8 @@
 
 ![](assets/assets/blogs/portfolio-blog/images/home-page.jpg)
 
-## Introduction
+##### Introduction
+
 Ever since embarking on my Flutter learning journey, I have delved into the creation of several captivating Flutter projects. However, as time has passed, I've noticed a challenge arising—I began to forget some of the essential concepts and cods I had utilized in those projects. Realizing the importance of preserving my knowledge, I came to a profound realization: the necessity of documentation.
 
 In the midst of my quest for improvement, I stumbled upon an intriguing Instagram post that emphasized the significance of IT developers having a portfolio blog. It became clear to me that such a blog would not only aid in showcasing my work but also serve as a valuable resource for future interviews and personal growth.
@@ -13,14 +14,14 @@ Initially, I experimented with GitHub Pages and a Jekyll theme to create my port
 
 &nbsp;
 
-## Goal
+##### Goal
 * Build Flutter web
 * Learn how to make responsive web
 * Host on GitHub Pages
 
 &nbsp;
 
-## Where did I get reference for blog?
+##### Where did I get reference for blog?
 The blog that became the reference of my blog referred to vonge theme in Jekyll theme. While initially drawing inspiration from a specific theme, I envision gradually infusing my portfolio blog with a touch of creative flair as I progress.
 
 ![](assets/assets/blogs/portfolio-blog/images/vonge-theme.jpg)
@@ -28,7 +29,7 @@ https://jazzed-kale.cloudvent.net/
 
 &nbsp;
 
-## Responsive Web
+##### Responsive Web
 
 One of the most challenging aspects of my project was implementing responsive web design for my blog. It was my first time venturing into this territory, and I encountered several hurdles along the way. Initially, I explored using the **LayoutBuilder** class and the **MediaQuery.of()** method to handle different screen sizes and orientations. However, I soon realized that manually creating layouts and designs for each breakpoint would be inefficient and time-consuming.
 
@@ -37,7 +38,8 @@ Thankfully, I found a helpful package called **"responsive_framework"** that sim
 ![](assets/assets/blogs/portfolio-blog/images/responsive_framework.jpg)
 https://pub.dev/packages/responsive_framework
 
-### ResponsiveBreakpoints.builder
+#### ResponsiveBreakpoints.builder
+
 To use this package, ResponsiveBreakpoints.builder widget should be added to MaterialApp. Then, I need to define my own breakpoints and labels. I customized two more breakpoints and labes for this project. The screen can be designed differently at every breakpoint now.
 
 ```dart
@@ -76,7 +78,7 @@ class MyApp extends StatelessWidget {
 
 ```
 
-### ResponsiveValue
+#### ResponsiveValue
 
 This widget assigns a value that corresponds to the active breakpoint determined by the conditions specified in the conditional values. You must put **.value** method the end of the widget so that the values are vaild.
 
@@ -123,9 +125,10 @@ Desktop3:
 ![](assets/assets/blogs/portfolio-blog/images/desktop3.jpg)
 
 Tablet:
+
 ![](assets/assets/blogs/portfolio-blog/images/tablet.jpg)
 
-### ResponsiveRowColumn
+#### ResponsiveRowColumn
 
 ResponsiveRowColumn is a convenient widget that combines responsiveness features for organizing rows and columns. The layout, whether it's a row or a column, is determined by passing a ResponsiveRowColumnType. All the responsive widgets should be wrapped by ResponsiveRowColumnItem widget and ResponsiveRowColumnItem widget should be wrapped by ResponsiveRowColumn widget. Also, by using ternary operator, you can switch from Column to Row or Row to Colunm.
 
@@ -158,7 +161,7 @@ class Introduction extends StatelessWidget {
   }
 ```
 
-### ResponsiveRowColumnItem
+#### ResponsiveRowColumnItem
 All the responsive widgets are wrapped by thist widget. Also, you can hide or show specific widget corresponds to th conditions
 
 * #### ResponsiveVisibility
@@ -183,7 +186,7 @@ This package actually contains several other useful widgets that are both conven
 
 &nbsp;
 
-## Pages
+##### Pages
 
 I have created individual page files for each page, ensuring organized structure. All the components utilized on these pages are located within the 'components' folder. Moreover, essential project fonts and images are stored in the 'assets' folder. Additionally, the 'assets' folder also houses separate folders containing posts for projects and blogs, promoting efficient management and accessibility.
 
@@ -191,11 +194,11 @@ I have created individual page files for each page, ensuring organized structure
 
 ![](assets/assets/blogs/portfolio-blog/images/assets.jpg)
 
-### Home Page
+#### Home Page
 
 The home page consists of five components: the top navigation bar, introduction section, project section, blog section and the bottom navigation bar. During the design process, I dedicated considerable time to identifying suitable breakpoints for a responsive web layout. However, I believe there is room for further enhancements and fine-tuning to ensure optimal responsiveness and attention to detail.
 
-<br>
+&nbsp;
 
 #### Top navigation bar
 
@@ -272,7 +275,7 @@ ResponsiveRowColumnItem(
 ```
 &nbsp;
 
-##### Drawer
+#### Drawer
 
 The implementation of the Drawer widget posed a minor challenge during this project. I was initially unsure about creating a Drawer widget that could be utilized across all pages. However, after some exploration, I discovered that I could develop a custom drawer widget using GlobalKey or Builder. For this project, I opted to use GlobalKey. From my understanding, a key assigns uniqueness to widgets of the same type, allowing them to be differentiated. I plan to delve deeper into this concept and share my findings in a future post.
 
@@ -386,7 +389,8 @@ class IntroWork extends StatelessWidget {
 ```
 &nbsp;
 
-## Projects page
+##### Projects page
+----
 
 ![](assets/assets/blogs/portfolio-blog/images/projects-page.jpg)
 
@@ -457,7 +461,7 @@ By using SliverGridDelegateWithMaxCrossAxisExtent, I was able to specify the max
 
 &nbsp;
 
-### Markdown and Metadata
+##### Markdown and Metadata
 
 During the planning phase of this web project, I decided to utilize markdown files for the posts. Thankfully, I discovered a Flutter package specifically designed for handling markdown. However, the most significant challenge I faced was twofold: firstly, how to showcase the metadata for each thumbnail card, and secondly, how to efficiently load the markdown files.
 
@@ -685,19 +689,19 @@ FutureBuilder(
 
 &nbsp;
 
-## Web Hosting
+##### Web Hosting
 
 Looks like it's almost done. I've put in a tremendous effort into creating this blog, and now it's time to showcase it to the world by hosting it on the web. There are various ways to accomplish this, but after careful consideration, I've decided to host it on Github Pages. This platform not only offers the advantage of being free but also provides a high degree of freedom in managing and customizing your website.
 
 In addition to the benefits of free hosting and flexibility, Github Pages allows you to prominently display your coding contributions through commits. These contributions serve as a clear testament to your hard work and dedication as a programmer. By leveraging Github Pages, you can make continuous contributions and further enhance your web presence, solidifying your position as an industrious developer.
 
-### Create a Repository
+#### Create a Repository
 
 As far as I know, there are two ways to host on GitHub Pages, and I've chosen to upload the entire project to a repository and host it from there. The first step is to create a repository on GitHub specifically for this project. You have the flexibility to choose any name for the repository; it's entirely up to you. However, it's essential to ensure that the repository is set to "public" to enable hosting on GitHub Pages.
 
 ![](assets/assets/blogs/portfolio-blog/images/create-repository.jpg)
 
-### Build Web
+#### Build Web
 
 The official document explains well about this.
 https://docs.flutter.dev/platform-integration/web/building
@@ -795,7 +799,7 @@ Then, go to Settings -> Pages in the repository and activate GitHub Pages. Choos
 
 ![](assets/assets/blogs/portfolio-blog/images/settings-pages.jpg)
 
-### Actions and Workflows
+#### Actions and Workflows
 
 Waiting for just a second, and the web page is now hosted. Nevertheless, a persistent issue arises – I have to repeat this manual process each time I update or make adjustments to the project. This inefficiency becomes both frustrating and time-consuming.
 
@@ -842,7 +846,7 @@ Once you push this new file, you can monitor the ongoing processes in the Action
 
 &nbsp;
 
-## Conclusion
+##### Conclusion
 
 This project has been an eye-opening experience for me, showcasing the power of Flutter for multi-platform development. Initially, I heard that Flutter Web had its limitations, but recent updates have made it perform exceptionally well. Throughout this project, I gained the valuable skill of creating responsive web layouts, ensuring a seamless user experience across devices. Additionally, I honed my logical thinking abilities while crafting a structure to load markdown files independently.
 
