@@ -12,6 +12,9 @@ In the midst of my quest for improvement, I stumbled upon an intriguing Instagra
 
 Initially, I experimented with GitHub Pages and a Jekyll theme to create my portfolio blog. However, driven by my unwavering enthusiasm for Flutter and my ongoing journey to master it, I made a bold decision to develop my own blog using Flutter itself. This choice not only enabled me to showcase my expanding proficiency in Flutter but also provided a unique opportunity for hands-on learning as I honed my skills.
 
+GitHub link: https://github.com/Blackcode2/portfolio_blog
+----
+
 &nbsp;
 
 ##### Goal
