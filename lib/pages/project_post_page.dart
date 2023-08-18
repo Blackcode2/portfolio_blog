@@ -100,6 +100,7 @@ class ProjectPostPage extends StatelessWidget {
                       );
                     } else if (snapshot.hasData) {
                       return Markdown(
+                          selectable: true,
                           shrinkWrap: true,
                           data: snapshot.data!.toString(),
                           styleSheet: MarkdownStyleSheet.fromTheme(ThemeData(
